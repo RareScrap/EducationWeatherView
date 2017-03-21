@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="@dimen/image_side_length"
+        android:layout_height="match_parent"
+        android:id="@+id/conditionImageView"
+        android:contentDescription="@string/weather_condition_image"
+        android:scaleType="fitCenter" />
+
+    <android.support.v7.widget.GridLayout
+        app:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:columnCount="3"
+        app:rowCount="2"
+        app:useDefaultMargins="true">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dayTextView"
+            app:layout_column="0"
+            app:layout_columnSpan="3" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lowTextView"
+            app:layout_row="1"
+            app:layout_column="0"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hiTextView"
+            app:layout_row="1"
+            app:layout_column="1"
+            app:layout_columnWeight="1" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/humidityTextView"
+            app:layout_row="1"
+            app:layout_column="2"
+            app:layout_columnWeight="1" />
+    </android.support.v7.widget.GridLayout>
+</LinearLayout>
