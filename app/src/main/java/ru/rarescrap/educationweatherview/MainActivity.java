@@ -134,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
 
+                    connection.disconnect();
                     return new JSONObject(builder.toString());
                 }else {
                     Snackbar.make(findViewById(R.id.coordinatorLayout),
@@ -155,9 +156,11 @@ public class MainActivity extends AppCompatActivity {
         // Обработка ответа JSON и обновление ListView
         @Override
         protected void onPostExecute(JSONObject weather) {
-            convertJSONtoArrayList(weather); // Заполнение weatherList
-            weatherArrayAdapter.notifyDataSetChanged(); // Связать с ListView
-            weatherListView.smoothScrollToPosition(0); // Прокрутить до верха
+            if (weather != null) {
+                convertJSONtoArrayList(weather); // Заполнение weatherList
+                weatherArrayAdapter.notifyDataSetChanged(); // Связать с ListView
+                weatherListView.smoothScrollToPosition(0); // Прокрутить до верха
+            }
         }
     }
 
