@@ -2,9 +2,11 @@
 <resources>
     <string name="action_settings">Настройки</string>
     <string name="connect_error">Не удалось соединиться с OpenWeatherMap.org</string>
-    <string name="high_temp"></string>
+    <string name="high_temp">Макс: %s</string>
     <string name="humidity">Влажность: %s</string>
     <string name="invalid_url">Неправильный URL</string>
     <string name="read_error">Ошибка чтения погодный данных</string>
     <string name="weather_condition_image">Графическое представление погодных условий</string>
+    <string name="hint_text">Введите город (например, Moscow)</string>
+    <string name="low_temp">Мин: %s</string>
 </resources>
